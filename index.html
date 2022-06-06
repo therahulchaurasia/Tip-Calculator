@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header-img">
+      <img src="./images/logo.svg" alt="logo" />
+    </div>
+    <div class="main-div">
+      <div class="left-div-spacing">
+        <div class="for_bill">
+          <div class="label_and_tag">
+            <label for="bill_amount" class="bill_lb">Bill</label>
+            <label
+              for="bill_amount"
+              class="other-one"
+              id="amt_label"
+              style="color: rgba(230, 20, 20, 0.87)"
+              >Need some value</label
+            >
+          </div>
+          <div class="for_symbol">
+            <input
+              type="number"
+              placeholder="0"
+              id="bill_amount"
+              class="amount cool danger"
+            />
+            <img
+              src="./images/icon-dollar.svg"
+              alt="dollar"
+              class="dollar_sym"
+            />
+          </div>
+        </div>
+        <div class="tip_buttons">
+          <label for="buttons">Select Tip %</label>
+          <div class="tip_percentage">
+            <div class="one-by-one">
+              <button class="single_button" id="buttons">5%</button>
+            </div>
+            <div class="one-by-one">
+              <button class="single_button" id="buttons">10%</button>
+            </div>
+            <div class="one-by-one">
+              <button class="single_button" id="buttons">15%</button>
+            </div>
+            <div class="one-by-one">
+              <button class="single_button" id="buttons">25%</button>
+            </div>
+            <div class="one-by-one">
+              <button class="single_button" id="buttons">50%</button>
+            </div>
+            <div class="one-by-one">
+              <input
+                type="number"
+                placeholder="custom"
+                id="custom_percentage"
+                class="custom_input cool"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="for_people">
+          <div class="label_and_tag">
+            <label for="people_input" class="people_lb">Number of people</label>
+            <label
+              for="people_input"
+              class="other-one"
+              id="zero_label"
+              style="color: rgba(230, 20, 20, 0.87)"
+              >Can't be zero</label
+            >
+          </div>
+          <div class="for_symbol">
+            <input
+              type="number"
+              placeholder="0"
+              id="people_input"
+              class="people danger cool"
+            />
+            <img
+              src="./images/icon-person.svg"
+              alt="people"
+              class="people_sym"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="right-div-spacing">
+        <div class="both">
+          <div class="final_tip">
+            <div class="divs_tip">
+              <h3 class="final_tip_amt_t">Tip Amount</h3>
+              <h4 class="per_person">/ person</h4>
+            </div>
+            <h1 class="final_tip_amt">$0.00</h1>
+          </div>
+          <div class="final_amt">
+            <div class="divs_amt">
+              <h3 class="final_tip_amt_t">Total</h3>
+              <h4 class="per_person">/ person</h4>
+            </div>
+            <h1 class="final_total_amt">$0.00</h1>
+          </div>
+          <button class="reset_btn disabled">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
