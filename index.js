@@ -19,11 +19,11 @@ const calcbuttonClick = (btn) => {
   const bill_value = bill_amt.value;
   const people_count = people.value;
   const button_value = parseInt(btn.innerHTML);
-  reset.disabled = false;
+  // reset.disabled = false;
   button.forEach((butn) => {
     butn.classList.remove("clicked_button");
   });
-  btn.classList.add("clicked_button");
+
   // console.log(+bill_value, +people_count, +button_value);
   const tip_amt =
     Math.round(((button_value * bill_value) / 100 / people.value) * 100) / 100;
@@ -40,6 +40,8 @@ const calcbuttonClick = (btn) => {
     zero_lb.classList.remove("other-one");
   }
   if (bill_value >= 1 && people_count >= 1) {
+    btn.classList.add("clicked_button");
+    reset.disabled = false;
     fn_tip_amt.innerHTML = `$${tip_amt}`;
     fn_total.innerHTML = `$${total_per_p}`;
   }
