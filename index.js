@@ -54,7 +54,7 @@ const customInputPercentage = () => {
   const bill_value = +bill_amt.value;
   const people_count = +people.value;
   const custom_val = +custom_per.value;
-  reset.disabled = false;
+
   button.forEach((butn) => {
     butn.classList.remove("clicked_button");
   });
@@ -73,6 +73,7 @@ const customInputPercentage = () => {
     zero_lb.classList.remove("other-one");
   }
   if (bill_value >= 1 && people_count >= 1) {
+    reset.disabled = false;
     fn_tip_amt.innerHTML = `$${tip_amt}`;
     fn_total.innerHTML = `$${total_per_p}`;
   }
